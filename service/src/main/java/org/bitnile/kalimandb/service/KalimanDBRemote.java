@@ -1,8 +1,5 @@
-package org.bitnile.kalimandb.service.kaliman.impl;
+package org.bitnile.kalimandb.service;
 
-import org.bitnile.kalimandb.common.DBVersion;
-import org.bitnile.kalimandb.rpc.protocol.RPCPacket;
-import org.bitnile.kalimandb.service.kaliman.KalimanDBService;
 import org.bitnile.kalimandb.common.LifecycleBase;
 import org.bitnile.kalimandb.common.protocol.RequestCode;
 import org.bitnile.kalimandb.rpc.netty.NettyRPCServer;

@@ -1,10 +1,12 @@
 package org.bitnile.kalimandb.service.kaliman.impl;
 
+import org.bitnile.kalimandb.service.KalimanDBServiceImpl;
+import org.bitnile.kalimandb.service.ServerRemotingProcessor;
 import org.bitnile.kalimandb.service.status.DBOperationStatus;
 import org.bitnile.kalimandb.service.status.CompositeResult;
 import org.bitnile.kalimandb.service.status.Result;
 import org.bitnile.kalimandb.common.document.Document;
-import org.bitnile.kalimandb.common.document.impl.DefaultDocument;
+import org.bitnile.kalimandb.common.document.DefaultDocument;
 import org.bitnile.kalimandb.common.protocol.RequestCode;
 import org.bitnile.kalimandb.common.protocol.ServiceEnum;
 import org.bitnile.kalimandb.common.protocol.body.DatabaseServiceRequestArgs;

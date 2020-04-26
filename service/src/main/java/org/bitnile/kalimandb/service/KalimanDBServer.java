@@ -1,9 +1,7 @@
-package org.bitnile.kalimandb.service.kaliman.impl;
+package org.bitnile.kalimandb.service;
 
-import org.apache.commons.io.FileUtils;
 import org.bitnile.kalimandb.common.DBVersion;
 import org.bitnile.kalimandb.rpc.protocol.RPCPacket;
-import org.bitnile.kalimandb.service.kaliman.KalimanDBService;
 import org.bitnile.kalimandb.service.option.KalimanDBServerConfig;
 import org.bitnile.kalimandb.service.option.ServiceConfig;
 import org.bitnile.kalimandb.common.LifecycleBase;
@@ -12,7 +10,6 @@ import org.bitnile.kalimandb.raft.RaftConfig;
 import org.bitnile.kalimandb.raft.RaftEngine;
 import org.bitnile.kalimandb.storage.option.StoreConfig;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Objects;
 

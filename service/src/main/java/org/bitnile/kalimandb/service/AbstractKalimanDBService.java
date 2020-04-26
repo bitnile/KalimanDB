@@ -1,9 +1,8 @@
-package org.bitnile.kalimandb.service.kaliman.impl;
+package org.bitnile.kalimandb.service;
 
 import org.bitnile.kalimandb.common.exception.ExecuteClosureException;
 import org.bitnile.kalimandb.common.serializer.SerializerFactory;
 import org.bitnile.kalimandb.common.serializer.SerializerType;
-import org.bitnile.kalimandb.service.kaliman.KalimanDBService;
 import org.bitnile.kalimandb.service.option.ServiceConfig;
 import org.bitnile.kalimandb.common.LifecycleBase;
 import org.bitnile.kalimandb.common.StoreClosure;
@@ -14,7 +13,7 @@ import java.util.UUID;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
-import static org.bitnile.kalimandb.common.document.impl.AbstractDocument.ID_NAME;
+import static org.bitnile.kalimandb.common.document.AbstractDocument.ID_NAME;
 
 /**
  * @author ITcathyh

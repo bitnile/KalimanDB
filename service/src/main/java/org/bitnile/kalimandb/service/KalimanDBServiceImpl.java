@@ -1,6 +1,6 @@
-package org.bitnile.kalimandb.service.kaliman.impl;
+package org.bitnile.kalimandb.service;
 
-import org.bitnile.kalimandb.common.document.impl.DefaultDocument;
+import org.bitnile.kalimandb.common.document.DefaultDocument;
 import org.bitnile.kalimandb.common.serializer.SerializerFactory;
 import org.bitnile.kalimandb.service.option.ServiceConfig;
 import org.bitnile.kalimandb.service.status.DBOperationStatus;
@@ -16,7 +16,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Map;
 import java.util.UUID;
 
-import static org.bitnile.kalimandb.common.document.impl.AbstractDocument.ID_NAME;
+import static org.bitnile.kalimandb.common.document.AbstractDocument.ID_NAME;
 
 /**
  * @author ITcathyh

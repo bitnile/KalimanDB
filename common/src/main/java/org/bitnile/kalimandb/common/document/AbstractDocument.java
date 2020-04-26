@@ -1,7 +1,6 @@
-package org.bitnile.kalimandb.common.document.impl;
+package org.bitnile.kalimandb.common.document;
 
 import org.apache.commons.lang.StringUtils;
-import org.bitnile.kalimandb.common.document.Document;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

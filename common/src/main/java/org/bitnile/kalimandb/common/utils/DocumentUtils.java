@@ -2,7 +2,7 @@ package org.bitnile.kalimandb.common.utils;
 
 
 import org.bitnile.kalimandb.common.document.Document;
-import org.bitnile.kalimandb.common.document.impl.DefaultDocument;
+import org.bitnile.kalimandb.common.document.DefaultDocument;
 import org.bitnile.kalimandb.common.serializer.SerializerFactory;
 import org.bitnile.kalimandb.common.serializer.SerializerType;
 

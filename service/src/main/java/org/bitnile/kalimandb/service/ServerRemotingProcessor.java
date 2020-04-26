@@ -1,8 +1,7 @@
-package org.bitnile.kalimandb.service.kaliman.impl;
+package org.bitnile.kalimandb.service;
 
 import io.netty.channel.ChannelHandlerContext;
-import org.bitnile.kalimandb.common.document.impl.DefaultDocument;
-import org.bitnile.kalimandb.service.kaliman.KalimanDBService;
+import org.bitnile.kalimandb.common.document.DefaultDocument;
 import org.bitnile.kalimandb.service.status.CompositeResult;
 import org.bitnile.kalimandb.service.status.Result;
 import org.bitnile.kalimandb.common.document.Document;

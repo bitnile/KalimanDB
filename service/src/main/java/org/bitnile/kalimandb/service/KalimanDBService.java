@@ -1,4 +1,4 @@
-package org.bitnile.kalimandb.service.kaliman;
+package org.bitnile.kalimandb.service;
 
 import org.bitnile.kalimandb.service.status.CompositeResult;
 import org.bitnile.kalimandb.service.status.Result;
