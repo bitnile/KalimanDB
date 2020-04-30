@@ -2,7 +2,7 @@ package org.bitnile.kalimandb.client.factory;
 
 import com.alipay.sofa.jraft.entity.PeerId;
 import org.bitnile.kalimandb.common.document.Document;
-import org.bitnile.kalimandb.common.document.impl.DefaultDocument;
+import org.bitnile.kalimandb.common.document.DefaultDocument;
 import org.bitnile.kalimandb.service.status.DBOperationStatus;
 import org.bitnile.kalimandb.service.status.CompositeResult;
 import org.bitnile.kalimandb.service.status.Result;

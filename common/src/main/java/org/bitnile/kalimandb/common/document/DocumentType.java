@@ -1,4 +1,4 @@
-package org.bitnile.kalimandb.common.document.impl;
+package org.bitnile.kalimandb.common.document;
 
 public enum DocumentType {
     Default(0);

@@ -8,7 +8,7 @@ import org.bitnile.kalimandb.client.DatabaseInstanceManager;
 import org.bitnile.kalimandb.client.KalimanDBClientRemotingService;
 import org.bitnile.kalimandb.client.kaliman.KalimanDB;
 import org.bitnile.kalimandb.common.document.Document;
-import org.bitnile.kalimandb.common.document.impl.DefaultDocument;
+import org.bitnile.kalimandb.common.document.DefaultDocument;
 import org.bitnile.kalimandb.common.protocol.body.DatabaseServiceResult;
 import org.bitnile.kalimandb.common.serializer.Serializer;
 import org.bitnile.kalimandb.common.serializer.SerializerFactory;

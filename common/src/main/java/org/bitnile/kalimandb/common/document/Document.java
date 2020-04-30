@@ -1,7 +1,5 @@
 package org.bitnile.kalimandb.common.document;
 
-import org.bitnile.kalimandb.common.document.impl.DocumentType;
-
 import java.util.Map;
 
 public interface Document {

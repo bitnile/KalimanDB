@@ -4,10 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.bitnile</groupId>
+    <groupId>io.github.bitnile</groupId>
     <artifactId>kalimandb-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 
 
     <modules>
@@ -143,37 +143,37 @@
 
             <!-- modules -->
             <dependency>
-                <groupId>org.bitnile</groupId>
+                <groupId>io.github.bitnile</groupId>
                 <artifactId>kalimandb-client</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.bitnile</groupId>
+                <groupId>io.github.bitnile</groupId>
                 <artifactId>kalimandb-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.bitnile</groupId>
+                <groupId>io.github.bitnile</groupId>
                 <artifactId>kalimandb-rpc</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.bitnile</groupId>
+                <groupId>io.github.bitnile</groupId>
                 <artifactId>kalimandb-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.bitnile</groupId>
+                <groupId>io.github.bitnile</groupId>
                 <artifactId>kalimandb-raft</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.bitnile</groupId>
+                <groupId>io.github.bitnile</groupId>
                 <artifactId>kalimandb-storage</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.bitnile</groupId>
+                <groupId>io.github.bitnile</groupId>
                 <artifactId>kalimandb-test</artifactId>
                 <version>${project.version}</version>
             </dependency>

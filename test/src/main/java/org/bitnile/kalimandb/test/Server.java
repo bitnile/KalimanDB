@@ -5,7 +5,7 @@ import org.apache.commons.io.FileUtils;
 import org.bitnile.kalimandb.raft.RaftConfig;
 import org.bitnile.kalimandb.raft.RaftNodeOptions;
 import org.bitnile.kalimandb.rpc.netty.NettyServerConfig;
-import org.bitnile.kalimandb.service.kaliman.impl.KalimanDBServer;
+import org.bitnile.kalimandb.service.KalimanDBServer;
 import org.bitnile.kalimandb.service.option.ServiceConfig;
 import org.bitnile.kalimandb.storage.option.StoreConfig;
 import java.io.File;

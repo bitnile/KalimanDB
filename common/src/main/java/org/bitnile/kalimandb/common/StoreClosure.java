@@ -53,9 +53,9 @@ public class StoreClosure implements TaskClosure {
 
     @Override
     public void run(Status status) {
-        if (!status.isOk()) {
-            error = ResponseCode.RAFT_TIMEOUT;
-        }
+//        if (!status.isOk()) {
+//            error = ResponseCode.RAFT_TIMEOUT;
+//        }
         latch.countDown();
     }
 

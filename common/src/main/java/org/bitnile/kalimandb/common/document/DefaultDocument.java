@@ -1,4 +1,4 @@
-package org.bitnile.kalimandb.common.document.impl;
+package org.bitnile.kalimandb.common.document;
 
 import java.util.*;
 

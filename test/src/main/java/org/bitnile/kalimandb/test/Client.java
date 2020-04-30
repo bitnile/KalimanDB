@@ -4,12 +4,12 @@ import org.bitnile.kalimandb.client.KalimanDBClient;
 import org.bitnile.kalimandb.client.config.KalimanDBClientConfig;
 import org.bitnile.kalimandb.client.kaliman.KalimanDB;
 import org.bitnile.kalimandb.common.document.Document;
-import org.bitnile.kalimandb.common.document.impl.DefaultDocument;
+import org.bitnile.kalimandb.common.document.DefaultDocument;
 import org.bitnile.kalimandb.common.exception.DatabaseClientException;
 import org.bitnile.kalimandb.rpc.netty.NettyClientConfig;
 import org.bitnile.kalimandb.service.status.CompositeResult;
 import org.bitnile.kalimandb.service.status.Result;
-import static org.bitnile.kalimandb.common.document.impl.AbstractDocument.ID_NAME;
+import static org.bitnile.kalimandb.common.document.AbstractDocument.ID_NAME;
 
 public class Client {
 
