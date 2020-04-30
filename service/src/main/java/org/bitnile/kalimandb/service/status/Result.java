@@ -3,21 +3,20 @@ package org.bitnile.kalimandb.service.status;
 import org.bitnile.kalimandb.common.document.Document;
 
 public class Result {
-    //    private String id;
     private DBOperationStatus status;
     private String msg;
     private int errCode;
     private Document document;
 
-    public Result(UpdateOperationResultBuilder builder) {
+    public Result(ResultBuilder builder) {
         this.status = builder.status;
         this.msg = builder.msg;
         this.errCode = builder.errCode;
         this.document = builder.document;
     }
 
-    public static UpdateOperationResultBuilder builder() {
-        return new UpdateOperationResultBuilder();
+    public static ResultBuilder builder() {
+        return new ResultBuilder();
     }
 
     public DBOperationStatus getStatus() {
@@ -56,29 +55,29 @@ public class Result {
         return status == DBOperationStatus.SUCCESS && errCode == 0;
     }
 
-    public static class UpdateOperationResultBuilder {
+    public static class ResultBuilder {
 
         private DBOperationStatus status;
         private String msg;
         private int errCode;
         private Document document;
 
-        public UpdateOperationResultBuilder status(DBOperationStatus status) {
+        public ResultBuilder status(DBOperationStatus status) {
             this.status = status;
             return this;
         }
 
-        public UpdateOperationResultBuilder msg(String msg) {
+        public ResultBuilder msg(String msg) {
             this.msg = msg;
             return this;
         }
 
-        public UpdateOperationResultBuilder errCode(int errCode) {
+        public ResultBuilder errCode(int errCode) {
             this.errCode = errCode;
             return this;
         }
 
-        public UpdateOperationResultBuilder document(Document document) {
+        public ResultBuilder document(Document document) {
             this.document = document;
             return this;
         }
