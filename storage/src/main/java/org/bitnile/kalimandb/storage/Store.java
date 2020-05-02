@@ -1,10 +1,7 @@
 package org.bitnile.kalimandb.storage;
 
 import org.bitnile.kalimandb.common.Lifecycle;
-import org.bitnile.kalimandb.common.StoreClosure;
 import org.bitnile.kalimandb.common.exception.StoreException;
-
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -19,5 +16,9 @@ public interface Store extends Lifecycle {
     Map<byte[], byte[]> getStartWith(byte[] prefix) throws StoreException;
 
     void delete(byte[] key) throws StoreException;
+
+    void writeSnapshot(String snapshotPath) throws StoreException;
+
+    void readSnapshot(String snapshotPath) throws StoreException;
 
 }

@@ -16,7 +16,6 @@ import org.bitnile.kalimandb.common.exception.StoreException;
 import org.bitnile.kalimandb.common.operation.StoreOperation;
 import org.bitnile.kalimandb.common.serializer.SerializerFactory;
 import org.bitnile.kalimandb.common.serializer.SerializerType;
-import org.bitnile.kalimandb.storage.RocksStore;
 import org.bitnile.kalimandb.storage.Store;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,8 +31,6 @@ import java.util.concurrent.TimeUnit;
 public class StoreStateMachine extends StateMachineAdapter {
 
     private static final Logger logger = LoggerFactory.getLogger(StoreStateMachine.class);
-
-    private final static String SNAPSHOT_DIR = "snapshot";
 
     private final Store store;
 
@@ -55,35 +52,27 @@ public class StoreStateMachine extends StateMachineAdapter {
 
     @Override
     public void onSnapshotSave(SnapshotWriter writer, Closure done) {
-        if(this.store instanceof RocksStore){
-            RocksStore rocksStore = (RocksStore) this.store;
-            String path = writer.getPath();
-            try {
-                rocksStore.writeSnapshot(path);
-                done.run(Status.OK());
-            } catch(StoreException ex){
-                logger.error("Failed to save snapshot file, path={}", path);
-                done.run(new Status(RaftError.EIO, "Failed to save snapshot file"));
-            }
-        } else{
-            super.onSnapshotSave(writer, done);
+        Store store = this.store;
+        String path = writer.getPath();
+        try {
+            store.writeSnapshot(path);
+            done.run(Status.OK());
+        } catch(StoreException ex){
+            logger.error("Failed to save snapshot file, path={}", path);
+            done.run(new Status(RaftError.EIO, "Failed to save snapshot file"));
         }
     }
 
     @Override
     public boolean onSnapshotLoad(SnapshotReader reader) {
-        if(this.store instanceof RocksStore){
-            RocksStore rocksStore = (RocksStore) this.store;
-            String path = reader.getPath();
-            try{
-                rocksStore.readSnapshot(path);
-                return true;
-            } catch(StoreException ex){
-                logger.error("Failed to load snapshot file, path={}", path);
-                return false;
-            }
-        } else {
-            return super.onSnapshotLoad(reader);
+        Store store = this.store;
+        String path = reader.getPath();
+        try{
+            store.readSnapshot(path);
+            return true;
+        } catch(StoreException ex){
+            logger.error("Failed to load snapshot file, path={}", path);
+            return false;
         }
     }
 
@@ -131,7 +120,7 @@ public class StoreStateMachine extends StateMachineAdapter {
                 store.put(key, value);
             }
         } catch(StoreException ex){
-            throw new StoreException("Failed to PUT, error on RocksStore", ex);
+            throw new StoreException("Failed to PUT, error on Store", ex);
         }
     }
 
@@ -142,7 +131,7 @@ public class StoreStateMachine extends StateMachineAdapter {
                 store.delete(key);
             }
         } catch(StoreException ex){
-            throw new StoreException("Failed to DELETE, error on RocksStore", ex);
+            throw new StoreException("Failed to DELETE, error on Store", ex);
         }
     }
 
@@ -151,8 +140,8 @@ public class StoreStateMachine extends StateMachineAdapter {
             byte[] val = this.store.get(key);
             success(closure, val);
         } catch(StoreException ex){
-            failure(closure, "Failed to GET, error on RocksStore");
-            throw new StoreException("Failed to GET, error on RocksStore", ex);
+            failure(closure, "Failed to GET, error on Store");
+            throw new StoreException("Failed to GET, error on Store", ex);
         }
     }
 
@@ -161,8 +150,8 @@ public class StoreStateMachine extends StateMachineAdapter {
             Map<byte[], byte[]> res = this.store.getStartWith(prefix);
             success(closure, res);
         } catch(StoreException ex){
-            failure(closure, "Failed to GET_START_WITH, error on RocksStore");
-            throw new StoreException("Failed to GET_START_WITH, error on RocksStore", ex);
+            failure(closure, "Failed to GET_START_WITH, error on Store");
+            throw new StoreException("Failed to GET_START_WITH, error on Store", ex);
         }
     }
 
