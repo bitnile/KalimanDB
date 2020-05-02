@@ -9,6 +9,36 @@
     <packaging>pom</packaging>
     <version>1.1.0</version>
 
+    <name>KalimanDB</name>
+    <description>A high-performance distributed document-oriented database implemented by Java</description>
+    <url>https://github.com/bitnile/KalimanDB</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/bitnile/KalimanDB</url>
+        <connection>scm:git:git@github.com:bitnile/KalimanDB.git</connection>
+        <developerConnection>scm:git:git@github.com:bitnile/KalimanDB.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>hecenjie</name>
+            <email>cenjie.ho@outlook.com</email>
+        </developer>
+        <developer>
+            <name>Crearns</name>
+            <email>cccreams@outlook.com</email>
+        </developer>
+        <developer>
+            <name>ITcathyh</name>
+        </developer>
+    </developers>
 
     <modules>
         <module>common</module>
